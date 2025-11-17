@@ -3,8 +3,8 @@ import { Plus, FileText, Calendar, Clock, CheckCircle, XCircle, AlertCircle } fr
 import { useAuth } from '../../lib/auth-context';
 import { mockApprovalRequests } from '../../lib/mock-data';
 import { StatusTimeline } from '../StatusTimeline';
-import { CreateRequestModal } from '../modals/CreateRequestModal';
-import { ReviewRequestModal } from '../modals/ReviewRequestModal';
+// import { CreateRequestModal } from '../modals/CreateRequestModal';
+// import { ReviewRequestModal } from '../modals/ReviewRequestModal';
 import type { ApprovalRequest } from '../../lib/types';
 
 export function ApprovalRequests() {
@@ -258,7 +258,7 @@ export function ApprovalRequests() {
       )}
 
       {/* Modals */}
-      {showCreateModal && (
+      {/* {showCreateModal && (
         <CreateRequestModal
           onClose={() => setShowCreateModal(false)}
           onSuccess={() => {
@@ -266,9 +266,9 @@ export function ApprovalRequests() {
             alert('Solicitação enviada com sucesso! Aguarde a análise do coordenador.');
           }}
         />
-      )}
+      )} */}
 
-      {showReviewModal && selectedRequest && (
+      {/* {showReviewModal && selectedRequest && (
         <ReviewRequestModal
           request={selectedRequest}
           onClose={() => {
@@ -281,7 +281,7 @@ export function ApprovalRequests() {
             alert('Análise registrada com sucesso!');
           }}
         />
-      )}
+      )} */}
     </div>
   );
 }
