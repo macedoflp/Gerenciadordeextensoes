@@ -12,7 +12,7 @@ export function CertificateCard({ certificate, onDownload, onValidate }: Certifi
   return (
     <div className="bg-white rounded-lg border-2 border-primary-200 shadow-md overflow-hidden">
       {/* Header with Award Icon */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-700 p-6 text-white">
+      <div className="border-b border-neutral-200 p-6">
         <div className="flex items-start justify-between">
           <div className="flex-1">
             <div className="flex items-center gap-2 mb-2">

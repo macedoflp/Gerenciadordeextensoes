@@ -22,7 +22,7 @@ export function PublicPortal() {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-700 rounded-xl p-8 text-white">
+      <div className=" rounded-xl p-8 text-white">
         <h1 className="m-0 mb-3 text-white">Portal Público de Extensão</h1>
         <p className="m-0 text-primary-100">
           Explore oportunidades de extensão universitária abertas à comunidade. Não é necessário login

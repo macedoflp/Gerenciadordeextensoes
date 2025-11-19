@@ -135,7 +135,7 @@ export function Login({ onLogin, onSignup, onForgotPassword }: LoginProps) {
           <p className="text-sm text-neutral-600">
             Não tem uma conta?{" "}
             <button
-              onClick={onSignup}
+              // onClick={onSignup}
               className="text-sky-600 hover:text-sky-700 font-medium transition-colors"
             >
               Cadastre-se
@@ -149,9 +149,9 @@ export function Login({ onLogin, onSignup, onForgotPassword }: LoginProps) {
             Contas de demonstração:
           </p>
           <div className="space-y-1 text-sm text-neutral-600">
-            <p><strong>Discente:</strong> joao.silva@universidade.edu.br</p>
-            <p><strong>Docente:</strong> maria.souza@universidade.edu.br</p>
-            <p><strong>Coordenador:</strong> carlos.mendes@universidade.edu.br</p>
+            <p><strong>Discente:</strong> joao.silva@discente.ufma.br</p>
+            <p><strong>Docente:</strong> maria.souza@docente.ufma.br</p>
+            <p><strong>Coordenador:</strong> carlos.mendes@docente.ufma.br</p>
             <p><strong>Senha:</strong> qualquer valor</p>
           </div>
         </div>

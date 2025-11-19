@@ -60,7 +60,7 @@ function StudentDashboard({ metrics, onNavigate }: any) {
       </div>
 
       {/* Progress Summary */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-700 rounded-xl p-6 text-white">
+      <div className="border border-neutral-200 rounded-xl p-6 text-white">
         <div className="flex items-start justify-between mb-4">
           <div>
             <h3 className="m-0 mb-2 text-white">Progresso de Extensão</h3>
@@ -72,7 +72,7 @@ function StudentDashboard({ metrics, onNavigate }: any) {
         </div>
         <div className="w-full bg-primary-800 rounded-full h-3 mb-2">
           <div
-            className="bg-white h-3 rounded-full transition-all duration-500"
+            className="bg-white border border-neutral-200 h-3 rounded-full transition-all duration-500"
             style={{ width: `${Math.min(progressPercentage, 100)}%` }}
           />
         </div>
