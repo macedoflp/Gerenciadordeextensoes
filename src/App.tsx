@@ -4,7 +4,7 @@ import { Header } from './components/layout/Header';
 import { Sidebar } from './components/layout/Sidebar';
 import { MobileNav } from './components/layout/MobileNav';
 import { MobileSidebar } from './components/layout/MobileSidebar';
-import { Login } from './components/pages/Login';
+import { HomePortal } from './components/pages/Login';
 import { Dashboard } from './components/pages/Dashboard';
 import { Opportunities } from './components/pages/Opportunities';
 import { ApprovalRequests } from './components/pages/ApprovalRequests';
@@ -19,6 +19,7 @@ import { Reports } from './components/pages/Reports';
 import { Communications } from './components/pages/Communications';
 import { Users } from './components/pages/Users';
 import { Settings } from './components/pages/Settings';
+import { Home } from 'lucide-react';
 
 function AppContent() {
   const { isAuthenticated, login } = useAuth();
@@ -35,7 +36,7 @@ function AppContent() {
       return <ForgotPassword onBack={() => setAuthView('login')} />;
     }
     return (
-      <Login
+      <HomePortal
         onLogin={login}
         onSignup={() => setAuthView('signup')}
         onForgotPassword={() => setAuthView('forgot-password')}

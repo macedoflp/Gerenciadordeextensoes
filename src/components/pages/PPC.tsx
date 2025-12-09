@@ -19,10 +19,10 @@ export function PPC() {
       </div>
 
       {/* Current Version */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-700 rounded-xl p-6 text-white">
+      <div className="bg-white border border-neutral-200 rounded-xl p-6">
         <div className="flex items-center gap-3 mb-3">
           <BookOpen className="w-6 h-6" />
-          <h3 className="m-0 text-white">Versão Atual: {mockPPC[1].version}</h3>
+          <h3 className="m-0">Versão Atual: {mockPPC[1].version}</h3>
         </div>
         <p className="m-0 text-primary-100 mb-4">
           Carga horária mínima de extensão: <strong>{mockPPC[1].minimumWorkload} horas</strong>

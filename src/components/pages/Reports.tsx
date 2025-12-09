@@ -51,10 +51,6 @@ export function Reports() {
           <Download className="w-4 h-4" />
           <span>Exportar PDF</span>
         </button>
-        <button className="flex items-center gap-2 px-4 py-2 bg-neutral-600 hover:bg-neutral-700 text-white rounded-lg transition-colors">
-          <Download className="w-4 h-4" />
-          <span>Exportar CSV</span>
-        </button>
       </div>
 
       {/* Charts */}
@@ -134,31 +130,6 @@ export function Reports() {
               </tr>
             </tbody>
           </table>
-        </div>
-      </div>
-
-      {/* Ranking */}
-      <div className="bg-white rounded-lg border border-neutral-200 p-6">
-        <h3 className="mb-4">Ranking por Carga Horária</h3>
-        <div className="space-y-3">
-          {[
-            { name: 'Maria Santos', hours: 95, course: 'Eng. Civil' },
-            { name: 'Pedro Costa', hours: 88, course: 'Administração' },
-            { name: 'Ana Lima', hours: 82, course: 'Direito' },
-          ].map((student, index) => (
-            <div key={index} className="flex items-center gap-4 p-4 bg-neutral-50 rounded-lg">
-              <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center">
-                {index + 1}
-              </div>
-              <div className="flex-1">
-                <p className="m-0 mb-1">{student.name}</p>
-                <small className="text-neutral-600">{student.course}</small>
-              </div>
-              <div className="text-right">
-                <h4 className="m-0">{student.hours}h</h4>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </div>
