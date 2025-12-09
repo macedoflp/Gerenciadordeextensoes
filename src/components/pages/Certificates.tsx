@@ -19,7 +19,8 @@ export function Certificates() {
 
   const filteredCertificates = certificates.filter(cert =>
     cert.opportunityTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    cert.code.toLowerCase().includes(searchTerm.toLowerCase())
+    cert.code.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    cert.userName.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const handleDownload = (certificate: any) => {
@@ -94,19 +95,33 @@ export function Certificates() {
         </div>
       </div>
 
-      {/* Search */}
-      <div className="bg-white rounded-lg border border-neutral-200 p-4">
+
+      {isStudent && (<div className="bg-white rounded-lg border border-neutral-200 p-4">
         <div className="relative">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400" />
           <input
             type="text"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Buscar por título ou código..."
+            placeholder="Buscar por título ou código."
             className="w-full pl-11 pr-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
           />
         </div>
-      </div>
+      </div>)}
+
+      {!isStudent && (<div className="bg-white rounded-lg border border-neutral-200 p-4">
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400" />
+          <input
+            type="text"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            placeholder="Buscar por nome."
+            className="w-full pl-11 pr-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+          />
+        </div>
+      </div>)}
+
 
       {/* Certificates Grid */}
       {filteredCertificates.length === 0 ? (
@@ -126,6 +141,8 @@ export function Certificates() {
               Mostrando {filteredCertificates.length} de {certificates.length} certificados
             </small>
           </p>
+
+          {isStudent && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredCertificates.map(certificate => (
               <CertificateCard
@@ -136,6 +153,19 @@ export function Certificates() {
               />
             ))}
           </div>
+          )}
+          {!isStudent && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredCertificates.map(certificate => (
+              <CertificateCard
+                key={certificate.id}
+                certificate={certificate}
+                onDownload={() => handleDownload(certificate)}
+                onValidate={() => setShowValidateModal(true)}
+              />
+            ))}
+          </div>
+          )}
         </>
       )}
 

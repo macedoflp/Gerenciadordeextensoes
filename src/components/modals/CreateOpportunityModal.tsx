@@ -10,6 +10,7 @@ export function CreateOpportunityModal({ onClose, onSuccess }: CreateOpportunity
   const [formData, setFormData] = useState({
     title: '',
     description: '',
+    professor: '',
     modality: 'oficina',
     workload: '',
     startDate: '',
@@ -66,6 +67,21 @@ export function CreateOpportunityModal({ onClose, onSuccess }: CreateOpportunity
                 placeholder="Descreva a oportunidade..."
                 rows={4}
                 className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
+                required
+              />
+            </div>
+
+            <div>
+              <label htmlFor="professor" className="block mb-2">
+                Professor Responsável *
+              </label>
+              <input
+                id="professor"
+                type="text"
+                value={formData.professor}
+                onChange={(e) => setFormData({ ...formData, professor: e.target.value })}
+                placeholder="Nome do professor responsável"
+                className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
                 required
               />
             </div>

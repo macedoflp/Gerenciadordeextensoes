@@ -250,6 +250,17 @@ export function ApprovalRequests() {
                       Analisar
                     </button>
                   )}
+                    {!isCoordinator && request.status === 'indeferido' && (
+                    <button
+                      onClick={() => {
+                        setSelectedRequest(request);
+                        setShowReviewModal(true);
+                      }}
+                      className="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors whitespace-nowrap"
+                    >
+                      Abrir recurso
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
