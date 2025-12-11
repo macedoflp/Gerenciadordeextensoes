@@ -1,0 +1,12 @@
+# Dependências de projeto (Node.js)
+/node_modules
+
+# Logs
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+
+# Diretórios gerados em tempo de execução/compilação
+/dist
+/build
+/out
